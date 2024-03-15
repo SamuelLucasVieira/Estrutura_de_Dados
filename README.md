@@ -23,7 +23,7 @@
 <p>Digite no prompt de comando:</p>
 
 ### *npm i -g ts-node*
-## Passp 3° - Prompt-sync para leitura de valores no prompt:
+## Passogit 3° - Prompt-sync para leitura de valores no prompt:
 ### *npm i prompt-sync*
 ### *npm i @types/prompt-sync*
 
