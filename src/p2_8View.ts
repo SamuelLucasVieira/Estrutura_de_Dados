@@ -5,3 +5,5 @@ console.log("Array original:");
 console.log("Lista Original",x.lista)
 console.log("Lista Original", x.imprimir(x.lista))
 console.log("Lista Reversa:", x.reversa(x.lista));
+console.log("Chamada recursiva");
+        

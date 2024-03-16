@@ -14,12 +14,12 @@ class MyArray {
             console.log("Invocando a Lista");
             console.log("Invocando Lista(", lista.slice(1, lista.length), ");");
             let imprimir_lista: number[] = this.imprimir(lista.slice(1, lista.length));
-            let v: number[] = [];
-            if (imprimir_lista.length < lista.length) {
-                v.push(lista[0]);
-                return v.concat(imprimir_lista);
+            let escrever: number[] = [];
+            if (imprimir_lista.length <= lista.length -1) {
+                escrever.push(lista[0]);
+                return escrever.concat(imprimir_lista);
             } else {
-                return v;
+                return imprimir_lista;
             }
         }
     }
@@ -34,10 +34,11 @@ class MyArray {
             console.log("Invocando Lista( ", lista.slice(1, lista.length), ");");
             // Definição da função reversa_restante incrementa valor inicial conforme o caso base;
             let reversa_restante = this.reversa(lista.slice(1, lista.length));
-            if(reversa_restante.length >= 1){
-                return reversa_restante.concat(lista[0])
+            let escrever1: number[] = reversa_restante.concat(lista[0]);
+            if(reversa_restante.length >= 0){
+                return escrever1
             } else {
-                return reversa_restante;
+                return reversa_restante
             } 
         }
     }
