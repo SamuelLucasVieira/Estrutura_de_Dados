@@ -34,9 +34,9 @@ class MyArray {
             console.log("Invocando Lista( ", lista.slice(1, lista.length), ");");
             // Definição da função reversa_restante incrementa valor inicial conforme o caso base;
             let reversa_restante = this.reversa(lista.slice(1, lista.length));
-            let escrever1: number[] = reversa_restante.concat(lista[0]);
+            let reverter: number[] = reversa_restante.concat(lista[0]);
             if(reversa_restante.length >= 0){
-                return escrever1
+                return reverter
             } else {
                 return reversa_restante
             } 
