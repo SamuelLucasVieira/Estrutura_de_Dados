@@ -6,42 +6,31 @@ class MyArray {
     }
 
     imprimir(lista: number[]): number[] {
-        if (lista.length <= 1) {
+        if (lista.length <= 0) {
             console.log("Caso Base Atingido");
-            return lista;
+            return [];
         } else {
             console.log("Chamada recursiva");
             console.log("Invocando a Lista");
-            console.log("Invocando Lista(", lista.slice(1, lista.length), ");");
-            let imprimir_lista: number[] = this.imprimir(lista.slice(1, lista.length));
-            let escrever: number[] = [];
-            if (imprimir_lista.length <= lista.length -1) {
-                escrever.push(lista[0]);
-                return escrever.concat(imprimir_lista);
-            } else {
-                return imprimir_lista;
-            }
+            console.log("Invocando Lista(", lista.slice(0, lista.length), ");");
+             // Definição da função imprimir_restante incrementa valor inicial conforme o caso base;
+            let imprimir_restante: number[] = this.imprimir(lista.slice(1, lista.length));
+            return [lista[0], ...imprimir_restante];
         }
     }
 
     reversa(lista: number[]): number[] {
-        if (lista.length <= 1) {
+        if (lista.length <= 0) {
             console.log("Caso Base Atingido");
-            return lista;
+            return [];
         } else {
             console.log("Chamada recursiva");
             console.log("Invocando a reversa");
-            console.log("Invocando Lista( ", lista.slice(1, lista.length), ");");
+            console.log("Invocando Lista( ", lista.slice(0, lista.length), ");");
             // Definição da função reversa_restante incrementa valor inicial conforme o caso base;
-            let reversa_restante = this.reversa(lista.slice(1, lista.length));
-            let reverter: number[] = reversa_restante.concat(lista[0]);
-            if(reversa_restante.length >= 0){
-                return reverter
-            } else {
-                return reversa_restante
-            } 
-        }
+            let reversa_restante:number[] = this.reversa(lista.slice(1, lista.length));
+            return[...reversa_restante, lista[0]]
     }
 }
-
+}
 export { MyArray };
